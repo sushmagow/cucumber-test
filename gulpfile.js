@@ -1,10 +1,5 @@
-var gulp = require('gulp'),
-	cucumber = require('gulp-cucumber');
+var gulp = require('gulp');
 
 gulp.task('test', function () {
-	return gulp.src('features/*')
-	.pipe(cucumber({
-		'steps': 'features/step/steps.js',
-		'format': 'summary'
-	}));
+	return './node_modules/.bin/cucumber-js';
 });
